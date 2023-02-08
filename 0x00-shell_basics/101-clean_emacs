@@ -1,3 +1,2 @@
 #!/bin/bash
- rm *~ > 101-clean_emacs
-echo -e #!/bin/bashn rm *~
+rm *~
