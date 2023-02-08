@@ -1,1 +1,1 @@
-pwd to show the current working directory
+test shell navigation
