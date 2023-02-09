@@ -1,2 +1,2 @@
 #!/bin/bash
-cmod −R a=x ./
+cmod −R a+x ./
