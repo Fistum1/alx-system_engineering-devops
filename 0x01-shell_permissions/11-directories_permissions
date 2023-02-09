@@ -1,2 +1,2 @@
 #!/bin/bash
-cmod −R a+x alx-system_engineering-devops
+cmod −R a=x alx-system_engineering-devops
