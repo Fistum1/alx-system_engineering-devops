@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that loops from 1 to 10 and other features using while loop and if, elif and else
+# Bash script that loops from 1 to 10 and other features
 i=0
 while [ $i -le 9 ]
 do
@@ -14,3 +14,4 @@ do
 	fi
 	((i++))
 done
+

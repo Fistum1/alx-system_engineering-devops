@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that displays the time for 12 hours and 59 minutes using while loop and for and until
+# Bash script that displays the time for 12 hours and 59 minutes
 i=0
 while [ $i -le 12 ];
 do
@@ -12,3 +12,4 @@ do
 	done
 	((i++))
 done
+
