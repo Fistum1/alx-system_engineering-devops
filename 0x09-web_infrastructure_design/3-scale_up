@@ -1,0 +1,13 @@
+Alx-system_engineering-devops(0x09-Web infrastructure design)
+
+
+Definitions and Explanations.
+
+1. For every additional element, why are adding it? 
+I have added one server and one load balancer. Adding the new server has allowed me to 
+separate each component (web server: Nginx, Application server: code base and Database: 
+MySQL) in there own server and yet having one extra server with all the components to serve 
+as a backup if any of the components or server fails. Each server is being monitored and has 
+a firewall. I have also added an extra load balancer that will assist in handling more 
+traffic across the whole infrastructure.
+

@@ -1,0 +1,50 @@
+Alx-system_engineering-devops(0x09-Web infrastructure design)
+
+Definitions and Explanations.
+
+1. What is a server?
+A server is a computer program or device which provides a service to another computer program 
+and its user. It is also known as the "client". 
+
+2. What is the role of a domain name?
+A domain name helps to identify Internet resources in a text-based label that is easier to 
+remind than numerical addresses (IP addresses).
+
+3. What type of DNS record www is in www.foobar.com?
+It is a "cname", which helps to record www from the Domain Name System (DNS).
+
+4. What is the role of the Web Server?
+It helps to store, process and display website contents (codebase) as well as deliver 
+web pages to users through the protocol HTTP.
+
+5. What is the role of the application server?
+It helps to generate dynamic contents by executing server-side code such as JSP, Ajax, PHP, etc.
+
+6. What is the role of the database?
+It helps to manage data systematically and efficiently in a well-organized manner which allows 
+data to be easily insert, update, delete, manage and manipulate.
+
+7. What is the server using to communicate with the computer of the user requesting
+the website?
+The server uses HTTP protocol to communicate over the internet.
+
+
+Issues:
+
+A. SPOF (Single Point Of Failure)
+A single point of failure is a part of a system that, if it fails, will stop the entire 
+system from working. There are a lot of single points of failures starting from having one 
+server that contains only one web server, application server, and database. 
+
+B. Downtime when maintenance is needed (like deploying a new code web server
+needs to be restarted)? 
+The downtime period might be longer than expected because the server is dependent on one code 
+base which at that moment, isn’t available. Therefor, users will not be able to access the 
+website and its contents which results in a bad user experience and loss of traffic.
+
+C. Cannot scale if too much incoming traffic? 
+The DNS points directly at the server hence it doesn’t contain a load balancer which 
+allows handling increased loads easier. This poses an issue to the volume of users trying to 
+access the website’s content and can lead to bad user experience or rather set a limit to the
+number of users the website will be able to accommodate.
+
