@@ -1,1 +1,1 @@
-test config managment
+shell navigation
