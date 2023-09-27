@@ -1,7 +1,5 @@
-# SSH Config File
-# SSH without password
-Host web-01
-	Hostname 52.91.124.115
-	User ubuntu
-	PasswordAuthentication no
-	IdentityFile ~/.ssh/school
+#!/usr/bin/env bash
+# Configure SSH configuration file
+Host 54.160.87.3
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
