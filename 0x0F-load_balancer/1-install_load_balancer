@@ -2,28 +2,10 @@
 #It configures a Nginx so that its HTTP response 
 #contains a custom header
 
-balancer="\
-frontend haproxy_balancer
-    bind *:80
-    mode http
-    default_backend webservers
-    
-backend webservers
-    balance roundrobin
-    server 277429-web-01 54.160.87.3:80 check
-    server 277429-web-02 100.26.216.200:80 check
-"
-# It updates the packages
-apt-get -y update
-apt-get -y upgrade
-
-# It adds HAProxy PPA
-apt-get -y install software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.5
-apt-get -y update
-
-# It installs HAProxy
-apt-get -y install haproxy
-cp -a /etc/haproxy/haproxy.cfg{,.orig}
-echo "$balancer" >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install haproxy
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
+sudo sed -i "$ a\listen 540-lb-01\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 277429-web-01 54.160.87.3:80 check\n\tserver 277429-web-02 100.26.216.200:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy start
