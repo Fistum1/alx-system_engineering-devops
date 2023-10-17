@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# It is a script for backup and compress of databases
+mysqldump --all-databases -u root --password="$1" > backup.sql
+day=$(date +"%d")
+month=$(date +"%m")
+year=$(date +"%Y")
+file_name="$day-$month-$year.tar.gz"
+tar -czvf "$file_name" backup.sql
+
