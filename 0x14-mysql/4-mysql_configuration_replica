@@ -41,6 +41,7 @@ server-id  =  2
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 
+
 # setting the base name & location of mysql bunary log file
 log_bin  = /var/log/mysql/mysql-bin.log
 
@@ -49,4 +50,3 @@ binlog_do_db    = tyrell_corp
 
 # setting location of the replica's relay log file
 relay-log = /var/log/mysql/mysql-relay-bin.log
-
