@@ -1,1 +1,1 @@
-shell navigation
+configuration management
