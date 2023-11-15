@@ -1,4 +1,4 @@
-# It configures Nginx to serve the route /airbnb-onepage/ from AirBnB_clone_v2.
+# Nginx configuration to serve the route /airbnb-onepage/ from AirBnB_clone_v2.
 
 server {
     # It listens on port 80
